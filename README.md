@@ -1,245 +1,237 @@
-# Go Backend & Web Development Mastery Roadmap
-
-> Goal: **Master Go for Backend & Web Development**  
-> Focus: Language core → Web APIs → Concurrency → Database → Production-ready code
+# Personal 1 week plan to MASTER GO
 
 ---
 
-## 🧱 PHASE 1: GO FOUNDATIONS (Language Core)
+##  PHASE 1: GO FOUNDATIONS
 
-### 1. Go Introduction & Tooling
-- [x] Why Go exists (problems it solves vs Java / Python / C++)
-- [ ] History & design philosophy of Go (simplicity, concurrency, fast builds)
-- [ ] Installing Go & setting up environment
-- [ ] `go` command basics
-  - [ ] `go run`
-  - [ ] `go build`
-  - [ ] `go install`
-- [ ] Understanding `GOPATH` vs Go Modules (modern Go)
+### Go Introduction & Tooling
+- [ ] Why Go exists (vs Java / Python / C++)
+- [ ] History & design philosophy of Go
+- [ ] Installing Go & environment setup
+- [ ] go command basics
+  - [ ] go run
+  - [ ] go build
+  - [ ] go install
+- [ ] GOPATH vs Go Modules
+
+### Go Modules & Packages
+- [ ] go mod init
+- [ ] go.mod vs go.sum
+- [ ] go mod tidy
+- [ ] Importing packages
+- [ ] Exporting identifiers (capitalization)
+- [ ] Splitting code across files (same package)
+- [ ] Splitting code across multiple packages
+- [ ] Why & when to use multiple packages
+- [ ] Using third-party packages
 
 ---
 
-### 2. Go Modules & Project Structure
-- [ ] `go mod init`
-- [ ] `go.mod` vs `go.sum`
-  - Dependency versions
-  - Integrity & checksum verification
-- [ ] `go mod tidy`
-- [ ] Semantic versioning (`v1`, `v2`, import paths)
-- [ ] Basic idea of publishing a Go module
-- [ ] Idiomatic project structure for web apps
+##  PHASE 2: LANGUAGE BASICS & DATA TYPES
 
----
-
-### 3. Language Basics
-- [ ] `var` vs `:=`
-- [ ] Zero values (VERY important in Go)
-- [ ] Constants & `iota`
-- [ ] Scope rules (block, package, global)
+### Language Basics
+- [ ] var vs :=
+- [ ] Zero values
+- [ ] Constants
+- [ ] iota
+- [ ] Scope rules
 - [ ] Variable shadowing
-- [ ] Naming conventions & idiomatic Go style
+- [ ] Idiomatic naming conventions
 
----
-
-### 4. Data Types (Deep)
-- [ ] Booleans
-- [ ] Numeric Types
-  - [ ] Signed vs unsigned integers
-  - [ ] Why `int` exists
-  - [ ] When to use `int8`, `int16`, etc.
-- [ ] Floating-point numbers
+### Data Types
+- [ ] Boolean
+- [ ] Numeric types
+  - [ ] Signed vs unsigned
+  - [ ] Why int exists
+  - [ ] When to use int8 / int16
+- [ ] Floating point numbers
 - [ ] Complex numbers
-- [ ] Runes (Unicode & UTF-8 handling)
+- [ ] Runes (Unicode)
 - [ ] Strings
   - [ ] Raw string literals
   - [ ] Interpreted string literals
-- [ ] Type conversion (explicit only — no implicit casting)
+- [ ] Type conversion (explicit only)
 
 ---
 
-## 🧩 PHASE 2: COMPOSITE TYPES & CONTROL FLOW
+##  PHASE 3: COMPOSITE TYPES & CONTROL FLOW
 
-### 5. Composite Types
-- [ ] Arrays (fixed-size, value semantics)
+### Composite Types
+- [ ] Arrays
 - [ ] Slices
   - [ ] Length vs capacity
-  - [ ] Growth strategy
-  - [ ] Backing array behavior
-- [ ] `make()` vs `new()`
-- [ ] Slice ↔ Array conversion
+  - [ ] Growth behavior
+  - [ ] Backing array
+- [ ] make() vs new()
+- [ ] Slice ↔ array conversion
 - [ ] Maps
   - [ ] Comma-ok idiom
   - [ ] Reference semantics
-- [ ] When to use Struct vs Map
+- [ ] Struct vs map (decision criteria)
+
+### Control Flow
+- [ ] if / if-else
+- [ ] switch
+  - [ ] Expression switch
+  - [ ] Type switch
+- [ ] for loop
+- [ ] for range
+- [ ] break / continue
+- [ ] goto (discouraged)
 
 ---
 
-### 6. Structs (VERY IMPORTANT)
-- [ ] Defining struct types
-- [ ] Struct literal notation (all forms)
-- [ ] Zero values in structs
-- [ ] Struct tags
-  - `json`
-  - `validate`
-- [ ] Struct embedding (composition over inheritance)
-- [ ] Export rules (capitalized identifiers)
+##  PHASE 4: FUNCTIONS, POINTERS & MEMORY
 
----
-
-### 7. Control Flow
-- [ ] `if`, `if-else`
-- [ ] `switch`
-  - Expression switch
-  - Type switch
-- [ ] `for` loop (ONLY loop in Go)
-- [ ] `for range`
-  - Arrays
-  - Slices
-  - Maps
-  - Strings
-- [ ] `break`, `continue`
-- [ ] `goto` (why it’s discouraged)
-
----
-
-## 🔧 PHASE 3: FUNCTIONS, POINTERS & MEMORY
-
-### 8. Functions
+### Functions
 - [ ] Function basics
 - [ ] Multiple return values
 - [ ] Named return values
 - [ ] Variadic functions
 - [ ] Anonymous functions
-- [ ] Closures (state retention)
-- [ ] Call-by-value (core Go concept)
+- [ ] Closures
+- [ ] Recursion
+- [ ] Functions as values
+- [ ] Returning functions
+- [ ] Call-by-value
 
----
-
-### 9. Pointers & Memory
-- [ ] Pointer basics (`&`, `*`)
+### Pointers & Memory
+- [ ] Pointer basics
 - [ ] Nil pointers
 - [ ] Pointer vs value semantics
 - [ ] Pointers with structs
-- [ ] Maps & slices as reference-like types
-- [ ] Why Go does NOT allow pointer arithmetic
+- [ ] Maps & slices as reference types
+- [ ] Data mutation using pointers
+- [ ] Why pointer arithmetic is not allowed
 - [ ] Garbage collection overview
+- [ ] defer keyword
 
 ---
 
-## 🧠 PHASE 4: METHODS, INTERFACES & GENERICS
+##  PHASE 5: STRUCTS, METHODS & INTERFACES
 
-### 10. Methods
+### Structs
+- [ ] Defining struct types
+- [ ] Struct literals
+- [ ] Zero values in structs
+- [ ] Structs with pointers
+- [ ] Struct tags
+  - [ ] json
+- [ ] Struct embedding
+- [ ] Custom types
+- [ ] Type aliases
+
+### Methods
 - [ ] Methods vs functions
-- [ ] Pointer receivers vs value receivers
-- [ ] When mutation requires pointers
+- [ ] Pointer receivers
+- [ ] Value receivers
+- [ ] Mutation methods
 - [ ] Constructor functions
 - [ ] Validation inside constructors
 
----
-
-### 11. Interfaces (CORE OF GO)
+### Interfaces
 - [ ] Interface basics
 - [ ] Implicit implementation
-- [ ] Empty interface (`any`)
+- [ ] Using interfaces
 - [ ] Embedded interfaces
+- [ ] Empty interface (any)
 - [ ] Type assertions
 - [ ] Type switches
-- [ ] Interface limitations & pitfalls
+- [ ] Interface limitations
 
----
-
-### 12. Generics (Go 1.18+)
-- [ ] Why generics were introduced
+### Generics
+- [ ] Why generics exist
 - [ ] Generic functions
-- [ ] Generic structs
+- [ ] Generic types
 - [ ] Type constraints
 - [ ] Type inference
-- [ ] When NOT to use generics
+- [ ] When not to use generics
 
 ---
 
-## 🚨 PHASE 5: ERROR HANDLING & DEBUGGING
+##  PHASE 6: ERROR HANDLING
 
-### 13. Error Handling
-- [ ] `error` interface
-- [ ] `errors.New`
-- [ ] `fmt.Errorf`
-- [ ] Error wrapping & unwrapping
+- [ ] error interface
+- [ ] errors.New
+- [ ] fmt.Errorf
+- [ ] Error wrapping
 - [ ] Sentinel errors
-- [ ] `panic` and `recover`
-- [ ] Stack traces
-- [ ] Debugging practices
+- [ ] panic
+- [ ] recover
+- [ ] Debugging runtime errors
 
 ---
 
-## ⚙️ PHASE 6: CONCURRENCY (GO SUPERPOWER)
+## ⚙️ PHASE 7: CONCURRENCY
 
-### 14. Goroutines
-- [ ] How goroutines are scheduled
+### Goroutines
+- [ ] Creating goroutines
 - [ ] Goroutine lifecycle
-- [ ] Common mistakes (goroutine leaks)
+- [ ] Common goroutine mistakes
 
----
-
-### 15. Channels
-- [ ] Unbuffered vs buffered channels
-- [ ] Channel direction (`<-chan`)
-- [ ] `select` statement
-- [ ] Worker pools
-- [ ] Fan-in / fan-out patterns
+### Channels
+- [ ] Unbuffered channels
+- [ ] Buffered channels
+- [ ] Channel directions
+- [ ] select statement
+- [ ] Multiple goroutines with channels
+- [ ] Error channels
+- [ ] Fan-in / fan-out
 - [ ] Pipelines
-- [ ] Race detection (`go test -race`)
+- [ ] Race detection
+
+### sync & context
+- [ ] sync.Mutex
+- [ ] sync.WaitGroup
+- [ ] context.Context
+- [ ] Deadlines
+- [ ] Cancellations
+- [ ] Request-scoped context
 
 ---
 
-### 16. `sync` & `context`
-- [ ] `sync.Mutex`
-- [ ] `sync.WaitGroup`
-- [ ] `context.Context`
-- [ ] Deadlines & cancellations
-- [ ] Request-scoped context (HTTP requests)
+##  PHASE 8: WEB DEVELOPMENT (GIN + SQL)
 
----
-
-## 🌐 PHASE 7: STANDARD LIBRARY & WEB BACKEND
-
-### 17. Standard Library (Backend Essentials)
-- [ ] File I/O (`os`, `io`, `bufio`)
+### Standard Library
+- [ ] File I/O
 - [ ] JSON encoding / decoding
-- [ ] `time`
-- [ ] `flag`
-- [ ] `regexp`
-- [ ] Logging
-  - `log`
-  - `slog`
-- [ ] `go:embed` (static files, configs)
+- [ ] time
+- [ ] flag
+- [ ] regexp
+- [ ] Logging (log / slog)
 
----
-
-### 18. Web Development (PRIMARY FOCUS)
-- [ ] `net/http` fundamentals
-  - Handlers
-  - ServeMux
-  - Request & Response lifecycle
-- [ ] REST API design principles
-- [ ] Middleware concept
-- [ ] Gin framework
+### Web APIs
+- [ ] net/http fundamentals
+- [ ] REST principles
+- [ ] Gin framework setup
+- [ ] Routing
+- [ ] Middleware
+- [ ] Middleware chaining
 - [ ] Request validation
-- [ ] Authentication
-  - Password hashing
-  - JWT
-- [ ] Authorization
-- [ ] Database access
-  - `database/sql`
-  - SQL drivers
-- [ ] Prepared statements vs direct queries
-- [ ] Graceful shutdown of HTTP servers
+
+### Database
+- [ ] Initializing database
+- [ ] SQL drivers
+- [ ] Creating tables
+- [ ] INSERT queries
+- [ ] SELECT queries
+- [ ] Prepared statements
+- [ ] Query vs Exec
+- [ ] Refactoring DB logic
+
+### Authentication & Authorization
+- [ ] User signup
+- [ ] Password hashing
+- [ ] JWT generation
+- [ ] JWT verification
+- [ ] Authentication middleware
+- [ ] Route protection
+- [ ] Authorization (ownership checks)
 
 ---
 
-## ✅ NEXT PHASE (NOT INCLUDED YET)
-- Testing & Benchmarking
-- Production logging
-- Performance profiling
-- Docker & deployment
-
+##  FINAL
+- [ ] Refactoring routes
+- [ ] Code organization
+- [ ] Project cleanup
+- [ ] Course completion
