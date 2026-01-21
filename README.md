@@ -8,7 +8,7 @@
 ## 🧱 PHASE 1: GO FOUNDATIONS (Language Core)
 
 ### 1. Go Introduction & Tooling
-- [ ] Why Go exists (problems it solves vs Java / Python / C++)
+- [x] Why Go exists (problems it solves vs Java / Python / C++)
 - [ ] History & design philosophy of Go (simplicity, concurrency, fast builds)
 - [ ] Installing Go & setting up environment
 - [ ] `go` command basics
