@@ -1,4 +1,4 @@
-package lists
+package arrays
 
 //struct used to group data together 
 // used for organize data
@@ -22,7 +22,7 @@ type Product struct {
 
 
 
-func  main()  {
+func  secmain()  {
 	
 	// var prices [4]int64 = [4]int64 { 3,3,2,1}
 
