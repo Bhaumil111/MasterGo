@@ -66,13 +66,13 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 
 ### Composite Types
 
-- [ ] Arrays
-- [ ] Slices
-  - [ ] Length vs capacity
-  - [ ] Growth behavior
-  - [ ] Backing array
-- [ ] make() vs new()
-- [ ] Slice ↔ array conversion
+- [x] Arrays
+- [x] Slices
+  - [x] Length vs capacity
+  - [x] Growth behavior
+  - [x] Backing array
+- [x] make() vs new()
+- [x] Slice ↔ array conversion
 - [ ] Maps
   - [ ] Comma-ok idiom
   - [ ] Reference semantics
@@ -95,28 +95,28 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 
 ### Functions
 
-- [ ] Function basics
-- [ ] Multiple return values
-- [ ] Named return values
-- [ ] Variadic functions
-- [ ] Anonymous functions
-- [ ] Closures
-- [ ] Recursion
-- [ ] Functions as values
-- [ ] Returning functions
-- [ ] Call-by-value
+- [x] Function basics
+- [x] Multiple return values
+- [x] Named return values
+- [x] Variadic functions
+- [x] Anonymous functions
+- [x] Closures
+- [x] Recursion
+- [x] Functions as values
+- [x] Returning functions
+- [x] Call-by-value
 
 ### Pointers & Memory
 
-- [ ] Pointer basics
-- [ ] Nil pointers
-- [ ] Pointer vs value semantics
-- [ ] Pointers with structs
-- [ ] Maps & slices as reference types
-- [ ] Data mutation using pointers
-- [ ] Why pointer arithmetic is not allowed
-- [ ] Garbage collection overview
-- [ ] defer keyword
+- [x] Pointer basics
+- [x] Nil pointers
+- [x] Pointer vs value semantics
+- [x] Pointers with structs
+- [x] Maps & slices as reference types
+- [x] Data mutation using pointers
+- [x] Why pointer arithmetic is not allowed
+- [x] Garbage collection overview
+- [x] defer keyword
 
 ---
 
