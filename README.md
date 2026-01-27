@@ -1,4 +1,4 @@
-# 🚀 Go Mastery Roadmap (2 Weeks)
+<!-- # 🚀 Go Mastery Roadmap (2 Weeks)
 
 A structured, in-depth roadmap to master **Go (Golang)** from foundations to production-ready backend development.
 
@@ -258,4 +258,4 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 - [ ] Refactoring routes
 - [ ] Code organization
 - [ ] Project cleanup
-- [ ] Course completion ✅
+- [ ] Course completion ✅ -->
