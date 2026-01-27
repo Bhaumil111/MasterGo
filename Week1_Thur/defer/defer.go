@@ -48,7 +48,6 @@ func safeOperation (){
 
 	}()
 	panic("Something went wrong")
-	fmt.Println("Can't reach here ")
 }
 
 func processData(data []int ) {
