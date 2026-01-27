@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"example.com/structs/users"
+	"example.com/structs/Users"
 )
 
 
@@ -26,6 +26,9 @@ func main(){
 	// appUser, err := newUser(userfirstName, userlastName,userbirthdate)
 
 	appUser , err := users.NewUser(userfirstName, userlastName,userbirthdate)
+	admin := users.NewAdmin("bhaumilpanchal@gmail.com", "test123")
+	admin.OutputUserData()
+	
 
 	if(err !=nil){
 		fmt.Println(err)
