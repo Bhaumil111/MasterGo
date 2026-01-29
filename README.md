@@ -161,12 +161,12 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 
 ### Generics
 
-- [] Why generics exist
-- [] Generic functions
-- [] Generic types
-- [] Type constraints
-- [] Type inference
-- [] When not to use generics
+- [x] Why generics exist
+- [x] Generic functions
+- [x] Generic types
+- [x] Type constraints
+- [x] Type inference
+- [x] When not to use generics
 
 ---
 
