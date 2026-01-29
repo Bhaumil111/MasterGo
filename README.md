@@ -145,23 +145,28 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 
 ### Interfaces
 
-- [ ] Interface basics
-- [ ] Implicit implementation
-- [ ] Using interfaces
-- [ ] Embedded interfaces
-- [ ] Empty interface (any)
-- [ ] Type assertions
-- [ ] Type switches
-- [ ] Interface limitations
+- [x] Interface basics
+- [x] Implicit implementation
+- [x] Using interfaces
+- [x] Embedded interfaces
+- [x] Empty interface (any)
+- [x] Interface basics
+- [x] Implicit implementation
+- [x] Using interfaces
+- [x] Embedded interfaces
+- [x] Empty interface (any)
+- [x] Type assertions
+- [x] Type switches
+- [x] Interface limitations
 
 ### Generics
 
-- [ ] Why generics exist
-- [ ] Generic functions
-- [ ] Generic types
-- [ ] Type constraints
-- [ ] Type inference
-- [ ] When not to use generics
+- [] Why generics exist
+- [] Generic functions
+- [] Generic types
+- [] Type constraints
+- [] Type inference
+- [] When not to use generics
 
 ---
 
