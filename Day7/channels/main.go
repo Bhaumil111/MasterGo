@@ -179,43 +179,71 @@
 // ==========================================================
 // Multiple senders + muliplte receiver
 
+// package main
+// import "fmt"
+// func main(){
+
+// 	ch:=make(chan int)
+// 	// G1
+// 	go func() {
+// 		fmt.Println("G1: sending 1")
+// 		ch <- 1
+// 		fmt.Println("G1: send done")
+// 	}()
+
+// 	// G2
+// 	go func() {
+// 		fmt.Println("G2: sending 2")
+// 		ch <- 2
+// 		fmt.Println("G2: send done")
+// 	}()
+
+// 	// G3
+// 	go func() {
+// 		fmt.Println("G3: waiting to receive")
+// 		x := <-ch
+// 		fmt.Println("G3: received", x)
+// 	}()
+
+// 	// G4
+// 	go func() {
+// 		fmt.Println("G4: waiting to receive")
+// 		x := <-ch
+// 		fmt.Println("G4: received", x)
+// 	}()
+
+// 	select {}
+
+
+// }
+
+
+
+
+// ==========================================================
+// Task queue
 package main
 import "fmt"
-func main(){
-
-	ch:=make(chan int)
-	// G1
-	go func() {
-		fmt.Println("G1: sending 1")
-		ch <- 1
-		fmt.Println("G1: send done")
-	}()
-
-	// G2
-	go func() {
-		fmt.Println("G2: sending 2")
-		ch <- 2
-		fmt.Println("G2: send done")
-	}()
-
-	// G3
-	go func() {
-		fmt.Println("G3: waiting to receive")
-		x := <-ch
-		fmt.Println("G3: received", x)
-	}()
-
-	// G4
-	go func() {
-		fmt.Println("G4: waiting to receive")
-		x := <-ch
-		fmt.Println("G4: received", x)
-	}()
-
-	select {}
 
 
+func worker(ch){
+	for {
+		task:= <-taskCh
+		process(task)
+	}
 }
 
 
+func main(){
 
+	ch = make(chan Task , 3)
+	for i:= 0;i<3;i++{
+		go worker(ch)
+	}
+	hellaTasks := getTask()
+	for _, task:= range hellaTasks{
+		taskCh <-task
+	}
+
+
+}
