@@ -193,11 +193,11 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 
 ### Channels
 
-- [ ] Unbuffered channels
-- [ ] Buffered channels
-- [ ] Channel directions
-- [ ] select statement
-- [ ] Multiple goroutines with channels
+- [x] Unbuffered channels
+- [x] Buffered channels
+- [x] Channel directions
+- [x] select statement
+- [x] Multiple goroutines with channels
 - [ ] Error channels
 - [ ] Fan-in / fan-out
 - [ ] Pipelines
@@ -207,6 +207,8 @@ A structured, in-depth roadmap to master **Go (Golang)** from foundations to pro
 
 - [ ] sync.Mutex
 - [ ] sync.WaitGroup
+- [ ] sync.Pool
+- [ ] sync.Conditions 
 - [ ] context.Context
 - [ ] Deadlines
 - [ ] Cancellations

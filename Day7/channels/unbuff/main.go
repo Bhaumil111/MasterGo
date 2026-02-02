@@ -146,34 +146,34 @@
 // ==========================================================
 
 
-// package main
-// import "fmt"
-// func main(){
+package main
+import "fmt"
+func main(){
 
-// ch := make(chan int) //create an unbuffered channels
-// go func(){
-// 	val :=432
-// 	fmt.Println("Sending data")
-// 	ch<-val
-// 	fmt.Println("Data Sent Successfully")
-// }()
+ch := make(chan int) //create an unbuffered channels
+go func(){
+	val :=432
+	fmt.Println("Sending data")
+	ch<-val
+	fmt.Println("Data Sent Successfully")
+}()
 
-// go func(){
-// 	fmt.Println("Waiting for the data to received")
-// 	val:= <-ch
-// 	fmt.Println("Data received" , val)
-// }()
-
-
-// 	fmt.Println("Waiting receiver 2")
-// 	val:=<-ch
-// 	fmt.Println("Data received" , val)
+go func(){
+	fmt.Println("Waiting for the data to received")
+	val:= <-ch
+	fmt.Println("Data received" , val)
+}()
 
 
+	fmt.Println("Waiting receiver 2")
+	val:=<-ch
+	fmt.Println("Data received" , val)
 
-// select{}
 
-// }
+
+select{}
+
+}
 
 
 // ==========================================================
@@ -213,37 +213,5 @@
 // 	}()
 
 // 	select {}
-
-
 // }
 
-
-
-
-// ==========================================================
-// Task queue
-package main
-import "fmt"
-
-
-func worker(ch){
-	for {
-		task:= <-taskCh
-		process(task)
-	}
-}
-
-
-func main(){
-
-	ch = make(chan Task , 3)
-	for i:= 0;i<3;i++{
-		go worker(ch)
-	}
-	hellaTasks := getTask()
-	for _, task:= range hellaTasks{
-		taskCh <-task
-	}
-
-
-}
