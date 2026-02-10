@@ -29,6 +29,9 @@ func (db *InMem) Save(id int, data string) {
 }
 // print all data in in-memory db
 func (db *InMem) PrintAll() {
+
+	db.mu.Lock()
+	defer db.mu.Unlock()
 	for id, data := range db.data {
 		fmt.Printf("ID: %d, Data: %s\n", id, data)
 	}

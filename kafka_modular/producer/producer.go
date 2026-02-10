@@ -17,7 +17,8 @@ func Producer(ctx context.Context, jobChan chan<- jobs.Job) {
 			return
 
 		default: // produce jobs
-			fmt.Printf("Added job %v to the channel\n", jobID)
+			// fmt.Printf("Added job %v to the channell\n", jobID)
+			fmt.Printf("Producer producing job %v \n", jobID)
 			job := jobs.Job{
 				ID:   jobID,
 				Data: fmt.Sprintf("Data %v", jobID),

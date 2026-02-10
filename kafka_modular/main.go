@@ -12,8 +12,10 @@ import (
 	"example.com/kafka_clone/consumer"
 	"example.com/kafka_clone/inMemory"
 	"example.com/kafka_clone/jobs"
+	"example.com/kafka_clone/processor"
 	"example.com/kafka_clone/producer"
 )
+
 // main function to start producer and consumer workers
 func main() {
 	var wg sync.WaitGroup
@@ -23,14 +25,15 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	db := inMemory.NewInMem() // create in-memory db
+	db := inMemory.NewInMem() // create in-memory dbo
+	p := processor.New(db) // create processor with reference to in-memory db
 
 	// start workers
 	numWorkers := 3 // number of consumer workers
 	for i := 1; i <= numWorkers; i++ {
 		wg.Add(1)
-		fmt.Printf("Worker %v on duty\n", i)
-		go consumer.Worker(ctx, i, jobChan, &wg, db)
+		fmt.Printf("Consumer  %v on duty\n", i)
+		go consumer.Worker(ctx, i, jobChan, &wg, db , p)
 	}
 
 	go producer.Producer(ctx, jobChan) //start producer in background
@@ -41,10 +44,10 @@ func main() {
 	<-sigCh // wait for interrupt signal
 	cancel()
 
-	fmt.Println("System Interrupted, waiting for workers")
+	fmt.Println("System Interrupted, waiting for ongoing consumers to finish...")
 	wg.Wait()
 
-	fmt.Println("All workers done, exiting")
+	fmt.Println("All consumers done, exiting")
 	time.Sleep(time.Second)
 
 	fmt.Println("Final state of in-memory DB:")
