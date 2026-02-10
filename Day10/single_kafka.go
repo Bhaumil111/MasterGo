@@ -137,7 +137,7 @@ func worker(ctx context.Context, id int, jobs <-chan Job, wg *sync.WaitGroup, in
 			return
 		case job := <-jobs: // listen for job from jobs channel
 			fmt.Printf("Worker %v started processing job %v \n", id, job.ID) // process job
-			time.Sleep(1000 * time.Millisecond)
+			time.Sleep(4000 * time.Millisecond)
 			inMemDb.Save(job.ID, job.Data) // save job data to inMem db
 
 			fmt.Printf("Worker %v finshed job %v\n", id, job.ID)
@@ -151,7 +151,7 @@ func worker(ctx context.Context, id int, jobs <-chan Job, wg *sync.WaitGroup, in
 func main() {
 
 	var wg sync.WaitGroup
-	jobs := make(chan Job)
+	jobs := make(chan Job , 3)
 
 	ctx, cancel := context.WithCancel(context.Background()) // creating root context
 
@@ -181,17 +181,17 @@ func main() {
 				fmt.Printf("Jobs producer shutdown\n")
 				return
 			default:
+				fmt.Printf("Added job %v to the channel\n", jobID)
 				job:= Job{
 
 					ID:jobID,
 					Data : fmt.Sprintf("Data %v", jobID),
 				}
 
-				fmt.Printf("Added job %v to the channel\n", jobID)
 				jobs <- job // send job to jobs channel
 
 				jobID++
-				time.Sleep(5000 * time.Millisecond)
+				time.Sleep(2000 * time.Millisecond)
 
 
 
