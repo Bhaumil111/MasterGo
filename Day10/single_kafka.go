@@ -97,6 +97,11 @@
 
 ///////////////////////// Now i am implementing map (in mem) store with prod , cons model like (kafka ) with all above features//////
 
+
+
+// prod ---- ////// ---- consumer 
+
+
 package main
 
 import (
@@ -174,7 +179,7 @@ func main() {
 	go func() { // here we use goroutine to add jobs in background concurrently
 		jobID := 1
 
-		for {
+		for  {
 			select {
 
 			case <-ctx.Done():
